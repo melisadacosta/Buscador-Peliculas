@@ -1,0 +1,630 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*home*/
+body {
+  margin: 0 auto;
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+#home main {
+  position: relative;
+  top: 70px;
+  left: 75px;
+  max-width: 1200px;
+  width: 1188px;
+}
+#home main h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+#home .img-container {
+  width: 100%;
+  height: 480px;
+  display: flex;
+  opacity: 0.4;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 35%;
+  background-image: url(../../img/batman.jpg);
+}
+#home .portada-container h1 {
+  position: absolute;
+  top: 200px;
+  font-size: 26px;
+  font-weight: 500;
+  color: #081c24;
+  z-index: 2;
+  left: 45%;
+}
+#home #popular {
+  display: flex;
+  flex-direction: column;
+  margin-top: -5%;
+}
+#home .category-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 1200px;
+  width: 95%;
+  margin-left: 50px;
+}
+#home .category-header p {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: rgba(8, 28, 36, 0.5);
+  font-weight: 300;
+}
+#home #popular-container, #home #upcoming-container, #home #topRated-container, #home #nowPlaying-container {
+  display: flex;
+  max-width: 1200px;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 70px;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+#home #popular-container h1, #home #upcoming-container h1, #home #topRated-container h1, #home #nowPlaying-container h1 {
+  width: 150px;
+}
+#home #movie-container {
+  display: flex;
+  flex-direction: column;
+}
+#home #popular, #home #topRated, #home #upcoming, #home #nowPlaying {
+  display: flex;
+  flex-direction: column;
+}
+#home #category-header {
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+}
+#home .movie-box:hover .popular-title {
+  color: #000000;
+}
+#home .popular-title {
+  font-size: 14px;
+  color: #00000079;
+}
+#home .popular-img {
+  width: 80%;
+  transform: scale(0.97);
+  transition: transform 0.5s ease;
+}
+#home .popular-img:hover {
+  transform: scale(1);
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  #main {
+    width: 92%;
+  }
+  #main #popular-container, #main #upcoming-container, #main #topRated-container, #main #nowPlaying-container {
+    padding: 0;
+    margin: 0% 0% 0% 3%;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 95%;
+    justify-content: space-around;
+  }
+  #main #popular-container .movie-box, #main #upcoming-container .movie-box, #main #topRated-container .movie-box, #main #nowPlaying-container .movie-box {
+    margin-right: 3%;
+  }
+  #main #popular-container .movie-box:nth-child(5n), #main #upcoming-container .movie-box:nth-child(5n), #main #topRated-container .movie-box:nth-child(5n), #main #nowPlaying-container .movie-box:nth-child(5n) {
+    display: none;
+  }
+  #main #popular-container .movie-box .popular-img, #main #upcoming-container .movie-box .popular-img, #main #topRated-container .movie-box .popular-img, #main #nowPlaying-container .movie-box .popular-img {
+    width: 105%;
+  }
+  #main #popular, #main #topaRated, #main #upcoming, #main #nowPlaying {
+    margin-top: 0;
+  }
+  #main #popular .category-header, #main #topaRated .category-header, #main #upcoming .category-header, #main #nowPlaying .category-header {
+    margin-left: 2%;
+    width: 90%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #home .portada-container h1 {
+    font-size: 28px;
+    top: 250px;
+    left: 48%;
+  }
+  #home .portada-container .img-container {
+    position: relative;
+    top: 68px;
+    background-position-x: 87px;
+  }
+  #home #main {
+    width: 92%;
+  }
+  #home #main #popular-container, #home #main #upcoming-container, #home #main #topRated-container, #home #main #nowPlaying-container {
+    padding: 0;
+    margin: 0% 0% 0% 3%;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 95%;
+    justify-content: space-around;
+  }
+  #home #main #popular-container .movie-box, #home #main #upcoming-container .movie-box, #home #main #topRated-container .movie-box, #home #main #nowPlaying-container .movie-box {
+    margin-right: 3%;
+  }
+  #home #main #popular-container .movie-box:nth-child(5n), #home #main #upcoming-container .movie-box:nth-child(5n), #home #main #topRated-container .movie-box:nth-child(5n), #home #main #nowPlaying-container .movie-box:nth-child(5n) {
+    display: none;
+  }
+  #home #main #popular-container .movie-box .popular-img, #home #main #upcoming-container .movie-box .popular-img, #home #main #topRated-container .movie-box .popular-img, #home #main #nowPlaying-container .movie-box .popular-img {
+    width: 105%;
+  }
+  #home #main #popular, #home #main #topaRated, #home #main #upcoming, #home #main #nowPlaying {
+    margin-top: 0;
+  }
+  #home #main #popular .category-header, #home #main #topaRated .category-header, #home #main #upcoming .category-header, #home #main #nowPlaying .category-header {
+    margin-left: 2%;
+    width: 90%;
+  }
+}
+#home header {
+  position: fixed;
+  top: 0;
+  left: 95px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  padding: 10px 50px;
+  z-index: 5;
+  background-color: white;
+  width: 100%;
+}
+#home header #lupa {
+  width: 20px;
+  height: 20px;
+}
+@media (max-width: 766px) {
+  #home header {
+    left: 54px;
+    padding: 0;
+    padding-left: 10px;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid grey;
+    box-sizing: border-box;
+  }
+}
+#home aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 95px;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+}
+#home #contenedor-logo {
+  background-color: #081c24;
+  width: 95px;
+  display: flex;
+  justify-content: center;
+  min-height: 70px;
+  cursor: pointer;
+}
+#home #contenedor-logo img {
+  width: 40px;
+}
+@media (max-width: 766px) {
+  #home #contenedor-logo {
+    width: 54px;
+    min-height: 50px;
+  }
+}
+#home #contenedor-categorias {
+  display: flex;
+  flex-direction: column;
+  width: 95px;
+  align-items: center;
+  position: fixed;
+  background-color: #FFFFFF;
+  height: 100%;
+  top: 70px;
+  left: 0;
+  z-index: 10;
+}
+@media (max-width: 766px) {
+  #home #contenedor-categorias {
+    display: none;
+  }
+}
+#home #categorias-lists {
+  left: 0;
+  margin: 0;
+  padding: 0;
+  width: 50vw;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 95px;
+  opacity: 0.6;
+}
+#home #categorias-lists li {
+  font-size: 10px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+#home #categorias-lists h1 {
+  color: #081c24;
+  font-size: 10px;
+  font-weight: 300;
+}
+#home .menuImg {
+  width: 20px;
+}
+@media (max-width: 766px) {
+  #home .menuImg {
+    transform: scale(0.9);
+  }
+}
+#home input[type=search] {
+  appearance: none;
+  outline: none;
+  -webkit-appearence: none;
+  -moz-appearence: none;
+  -o-appearence: none;
+  border: none;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 16px;
+}
+@media (max-width: 766px) {
+  #home input[type=search] {
+    width: 83%;
+  }
+}
+#home input[type=search]::-webkit-search-cancel-button {
+  display: none;
+}
+#home #menu-mobile {
+  display: none;
+}
+@media (max-width: 766px) {
+  #home #menu-mobile {
+    width: 7%;
+    display: flex;
+    justify-content: center;
+    border-left: 1px solid grey;
+    box-sizing: border-box;
+    height: 100%;
+    align-items: center;
+  }
+  #home #menu-mobile .fas {
+    font-size: 30px;
+  }
+}
+#home #menu-mobile-container {
+  height: 100vh;
+  position: fixed;
+  z-index: 50;
+  top: 50px;
+  background-color: #fffffff7;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#home #menu-mobile-list {
+  position: fixed;
+  width: 750px;
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 170px;
+  align-items: center;
+}
+#home .mobile-item {
+  width: 50%;
+  font-size: 6px;
+  height: 45%;
+  border-bottom: 1px solid grey;
+  box-sizing: border-box;
+}
+#home .border {
+  border-right: 1px solid grey;
+}
+#home .item-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  border-bottom: 1px solid grey;
+  justify-content: center;
+}
+
+#moviesAll {
+  position: relative;
+  top: 70px;
+  left: 75px;
+  max-width: 1200px;
+  width: 1188px;
+}
+
+.movie-container-all {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  margin-left: 60px;
+}
+
+#allMovies-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 70px;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.category-header-all {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 1200px;
+  width: 96%;
+  margin-left: 20px;
+}
+.category-header-all h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+.category-header-all p {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: rgba(8, 28, 36, 0.5);
+  font-weight: 300;
+}
+
+.movie-box-all {
+  width: 20%;
+  margin-bottom: 45px;
+}
+.movie-box-all h1 {
+  font-size: 14px;
+  font-weight: 300;
+  width: 70%;
+  line-height: 1.6;
+}
+
+.img-all {
+  width: 80%;
+  transform: scale(0.97);
+  transition: transform 0.5s ease;
+}
+.img-all:hover {
+  transform: scale(1);
+}
+
+#loadMore-button {
+  appearance: none;
+  outline: none;
+  -webkit-appearence: none;
+  -moz-appearence: none;
+  -o-appearence: none;
+  border: none;
+  width: 120px;
+  height: 43px;
+  cursor: pointer;
+  border: solid 1px black;
+  margin-top: -20px;
+  margin-bottom: 60px;
+}
+#loadMore-button:hover {
+  background-color: black;
+  color: white;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #home #allMovies-container {
+    padding: 0;
+    margin: 0% 0% 0% 3%;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 95%;
+    justify-content: space-around;
+  }
+  #home #allMovies-container .movie-box {
+    margin-right: 3%;
+  }
+  #home #allMovies-container .movie-box:nth-child(5n) {
+    display: none;
+  }
+  #home #allMovies-container .movie-box .popular-img {
+    width: 105%;
+  }
+  #home #popular, #home #topaRated, #home #upcoming, #home #nowPlaying {
+    margin-top: 0;
+  }
+  #home #popular .category-header, #home #topaRated .category-header, #home #upcoming .category-header, #home #nowPlaying .category-header {
+    margin-left: 2%;
+    width: 90%;
+  }
+}
+#home #movie-popup {
+  width: 100%;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+  height: 100%;
+  z-index: 11;
+}
+#home #fondo {
+  background-color: rgba(8, 28, 36, 0.98);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+#home #card {
+  width: 760px;
+  height: 850px;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  left: 20%;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  font-family: "Roboto", sans-serif;
+}
+#home #card #moviePoster {
+  width: 30%;
+  position: absolute;
+  z-index: 1200;
+  transform: scale(1.3);
+  top: 9%;
+  left: 9%;
+}
+#home #card #background-img {
+  width: 100%;
+  height: 40%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  box-shadow: inset 0 0 0 1000px rgba(8, 28, 36, 0.85);
+}
+#home #card #background-img #header-text {
+  width: 58%;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  margin-top: 50px;
+  justify-content: center;
+}
+#home #card #background-img #header-text h1 {
+  font-size: 30px;
+  color: #BC3B69;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  margin-left: 12%;
+}
+#home #card #background-img #header-text h2 {
+  font-size: 14px;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  color: #ffffffbd;
+  margin: 0;
+  margin-left: 12%;
+}
+#home #card #description-box {
+  width: 100%;
+  height: 60%;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  display: flex;
+}
+#home #card #genre-title, #home #card #releaseDate-title {
+  font-size: 16px;
+  color: #BC3B69;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+#home #card #genres, #home #card #releaseDate {
+  font-weight: 300;
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+#home #card #description-text {
+  width: 49%;
+  margin-left: 49%;
+}
+#home #card #decription {
+  width: 89%;
+  font-size: 14px;
+  line-height: 1.9;
+  margin-top: 11%;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+#home .mostrar {
+  display: block;
+  z-index: 99;
+}
+#home .view-all {
+  cursor: pointer;
+}
+#home .noSeacrhFound {
+  background-image: url(../../img/batman.jpg);
+  height: 540px;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  background-position-y: 50%;
+  width: 1200px;
+}
+#home .noSearchText {
+  position: absolute;
+  top: 50%;
+  margin: 0;
+  left: 40%;
+  font-weight: 500;
+  font-size: 30px;
+  z-index: 3;
+}
+#home .closer {
+  width: 40px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#home .closer:hover {
+  background-color: #BC3B69;
+}
+#home .closer .fa-times {
+  cursor: pointer;
+  color: #FFFFFF;
+}
+
+.popup-body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.position-pop {
+  position: fixed;
+}
+
+.hidden {
+  display: none;
+}
+
+/*# sourceMappingURL=main.css.map */

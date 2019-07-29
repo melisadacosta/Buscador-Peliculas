@@ -1,0 +1,210 @@
+#home{
+    #movie-popup{
+        width: 100%;
+        top: 0;
+        left: 0;
+        overflow-y: scroll;
+        height: 100%;
+        z-index: 11;
+    }
+    #fondo{
+        background-color: rgba(8,28,36,.98);
+        position: fixed;
+        top:0;
+        left:0;
+        z-index: 99;
+
+    }
+    #card{
+        width: 760px;
+        height: 850px;
+        position: absolute;
+        top: 0;
+        z-index: 100;
+        left: 20%;
+        display: flex;
+        flex-direction: column;
+        margin: 20px 0;
+        font-family: $main-font;
+        #moviePoster{
+            width: 30%;
+            position: absolute;
+            z-index: 1200;
+            transform: scale(1.3);
+            top: 9%;
+            left: 9%;
+        }
+        #background-img{
+            width: 100%;
+            height: 40%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            box-shadow: inset 0 0 0 1000px rgba(8, 28, 36, 0.85);
+            #header-text{
+                width: 58%;
+                display: flex;
+                flex-direction: column;
+                height: 400px;
+                margin-top: 50px;
+                justify-content: center;
+                h1{
+                    font-size: 30px;
+                    color: $secondary-color;
+                    font-family: $main-font;
+                    font-weight: 500;
+                    margin-left: 12%;
+                }
+                h2{
+                    font-size: 14px;
+                    font-weight: 300;
+                    font-family: $main-font;
+                    color: #ffffffbd;
+                    margin: 0;
+                    margin-left: 12%;
+                }
+            }
+        }
+        #description-box{
+            width: 100%;
+            height: 60%;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+            display: flex;
+        }
+        #genre-title, #releaseDate-title{
+            font-size: 16px;
+            color: $secondary-color;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+        #genres, #releaseDate{
+            font-weight: 300;
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+        #description-text{
+            width: 49%;
+            margin-left: 49%;
+        }
+        #decription{
+            width: 89%;
+            font-size: 14px;
+            line-height: 1.9;
+            margin-top: 11%;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+    }
+    .mostrar{
+        display: block;
+        z-index: 99;
+    }
+    .view-all{
+        cursor: pointer;
+    }
+    .noSeacrhFound{
+        background-image: url(../../img/batman.jpg);
+        height: 540px;
+        overflow: hidden;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.5;
+        background-position-y: 50%;
+        width: 1200px;
+    }
+    .noSearchText{
+        position: absolute;
+        top: 50%;
+        margin: 0;
+        left: 40%;
+        font-weight: 500;
+        font-size: 30px;
+        z-index: 3;
+    }
+    .closer{
+        width: 40px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            background-color: $secondary-color;
+        }
+    .fa-times{
+        cursor: pointer;
+        color: #FFFFFF;
+    }
+}
+.hidden{
+    display: none;
+}
+}
+.popup-body{
+    height: 100vh;
+    overflow: hidden;
+}
+.position-pop{
+    position: fixed;
+}
+@media(min-width: 768px) and (max-width: 1024px){
+    #home{
+        #movie-popup{
+        #card{
+            position: sticky;
+            #moviePoster{
+                visibility: hidden;
+
+            }
+        }
+    }
+        }
+        }
+
+@media (min-width: 320px) and (max-width: 767px) {
+    #home{
+        #movie-popup{
+        #card{
+            width: 97%;
+            height: 100%;
+            left: 2%;
+            position: sticky;
+             #header-text {
+                width: 100%;
+                height: 400px;
+                margin-top: 50px;
+                text-align: center;
+                position: relative;
+                top: -20%;
+                h1{
+                    font-size: 24px;
+                    margin-left: 0;
+                }
+                h2{
+                    margin-left: 0;
+                }
+             }
+            #moviePoster{
+                visibility: hidden;
+            }
+            #description-text {
+                width: 95%;
+                margin-left: 2%;
+            }
+            #decription{
+                width: 100%;
+                margin-top: 5%;
+                font-size: 13px;
+            }
+            #description-text{
+                h3{
+                    font-size: 14px;
+                }
+            }
+        }
+        }
+}
+}
