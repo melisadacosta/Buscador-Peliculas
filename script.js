@@ -6,7 +6,6 @@ const upcomingContainer = document.getElementById("upcoming-container");
 const nowPlayingContainer = document.getElementById("nowPlaying-container");
 //DIV TO CLONE
 const containerModel = popularContainer.children[0]
-// const movie = document.getElementsByClassName('movie-box')[5][10][15][20]
 //POPUP
 const card = document.getElementById('card')
 const bodyPop = document.getElementById('body');
@@ -105,31 +104,6 @@ menuMobileContainer.onclick=()=>{
         menuMobile.classList.remove('menuIntento')
         menuClick = 1
     }
-}
-
-mobileUl.children[0].onclick = ()=>{
-    stylesOnClick();
-    clickCount = 1;
-    currentPage = 1;
-    popularAll(currentPage);
-}
-mobileUl.children[1].onclick = ()=>{
-    stylesOnClick();
-    currentPage = 1;
-    clickCount = 2;
-    topRatedAll();
-}
-mobileUl.children[2].onclick = ()=>{
-    currentPage = 1;
-    clickCount = 3;
-    stylesOnClick();
-    upcomingAll(currentPage);
-}
-mobileUl.children[3].onclick = ()=>{
-    stylesOnClick();
-    clickCount = 4;
-    currentPage = 1;
-    NowPlayingAll();
 }
 
 movieHome(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`, popularContainer);

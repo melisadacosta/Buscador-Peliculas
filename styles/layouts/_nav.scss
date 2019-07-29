@@ -9,7 +9,7 @@ header{
     max-width: 1200px;
     padding: 10px 50px;
     z-index: 5;
-    background-color: white;
+    background-color: $white;
     width: 86%;
     #lupa{
         width: 20px;
@@ -43,7 +43,11 @@ aside{
     min-height: 70px;
     cursor: pointer;
     img{
-        width: 40px;
+        transform: scale(0.7);
+        transition: transform 0.5s ease;
+        &:hover{
+            transform: scale(0.8)
+        }
     }
     @media (max-width: 766px) {
         width: 54px;

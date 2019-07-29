@@ -54,18 +54,6 @@ const popularAll = paginaActual =>{
     })
 }
 
-menu.children[0].onclick = ()=>{
-    stylesOnClick()
-    clickCount = 1
-    currentPage = 1
-    popularAll(currentPage)
-}
-viewAll[0].onclick = ()=>{
-    stylesOnClick()
-    clickCount = 1
-    currentPage = 1
-    popularAll(currentPage)
-}
 const topRatedAll = paginaActual =>{
     categoryTitle.innerText = 'Top Rated Movies'
     fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&page=${paginaActual}`)
@@ -74,19 +62,6 @@ const topRatedAll = paginaActual =>{
         console.log(data)
         showMovies(data, paginaActual)
     })
-}
-
-menu.children[1].onclick = ()=>{
-    stylesOnClick()
-    currentPage = 1
-    clickCount = 2
-    topRatedAll()
-}
-viewAll[1].onclick = ()=>{
-    stylesOnClick()
-    clickCount = 2
-    currentPage = 1
-    popularAll(currentPage)
 }
 const upcomingAll = paginaActual =>{
     categoryTitle.innerText = 'Upcoming Movies'
@@ -97,20 +72,6 @@ const upcomingAll = paginaActual =>{
         showMovies(data, paginaActual)
     })
 }
-
-menu.children[2].onclick = ()=>{
-    currentPage = 1
-    clickCount = 3
-    stylesOnClick()
-    upcomingAll(currentPage)
-}
-viewAll[2].onclick = ()=>{
-    stylesOnClick()
-    clickCount = 3
-    currentPage = 1
-    popularAll(currentPage)
-}
-
 const NowPlayingAll = paginaActual =>{
     categoryTitle.innerText = 'Now Playing Movies'
     fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&page=${paginaActual}`)
@@ -120,18 +81,80 @@ const NowPlayingAll = paginaActual =>{
         showMovies(data, paginaActual)
     })
 }
-
+//MENU ONCLICKS
+menu.children[0].onclick = ()=>{
+    stylesOnClick()
+    clickCount = 1
+    currentPage = 1
+    popularAll(currentPage)
+}
+menu.children[1].onclick = ()=>{
+    stylesOnClick()
+    currentPage = 1
+    clickCount = 2
+    topRatedAll()
+}
+menu.children[2].onclick = ()=>{
+    currentPage = 1
+    clickCount = 3
+    stylesOnClick()
+    upcomingAll(currentPage)
+}
 menu.children[3].onclick = ()=>{
     stylesOnClick()
     clickCount = 4
     currentPage = 1
     NowPlayingAll()
 }
+//MOBILE MENU ONCLICKS
+mobileUl.children[0].onclick = ()=>{
+    stylesOnClick();
+    clickCount = 1;
+    currentPage = 1;
+    popularAll(currentPage);
+}
+mobileUl.children[1].onclick = ()=>{
+    stylesOnClick();
+    currentPage = 1;
+    clickCount = 2;
+    topRatedAll();
+}
+mobileUl.children[2].onclick = ()=>{
+    currentPage = 1;
+    clickCount = 3;
+    stylesOnClick();
+    upcomingAll(currentPage);
+}
+mobileUl.children[3].onclick = ()=>{
+    stylesOnClick();
+    clickCount = 4;
+    currentPage = 1;
+    NowPlayingAll();
+}
+//VIEW ALL ONCLICKS
+viewAll[0].onclick = ()=>{
+    stylesOnClick()
+    clickCount = 1
+    currentPage = 1
+    popularAll(currentPage)
+}
+viewAll[1].onclick = ()=>{
+    stylesOnClick()
+    clickCount = 2
+    currentPage = 1
+    topRatedAll(currentPage)
+}
+viewAll[2].onclick = ()=>{
+    stylesOnClick()
+    clickCount = 3
+    currentPage = 1
+    upcomingAll(currentPage)
+}
 viewAll[3].onclick = ()=>{
     stylesOnClick()
     clickCount = 4
     currentPage = 1
-    popularAll(currentPage)
+    NowPlayingAll(currentPage)
 }
 
 const busqueda = (paginaActual, textoBusqueda)=>{
