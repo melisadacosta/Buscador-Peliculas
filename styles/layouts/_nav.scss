@@ -135,6 +135,10 @@ input[type="search"]{
 input[type="search"]::-webkit-search-cancel-button {
     display: none;
 }
+input[type="search"]:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px white inset;
+    // -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
 #menu-mobile{
     display: none;
     @media (max-width: 766px){

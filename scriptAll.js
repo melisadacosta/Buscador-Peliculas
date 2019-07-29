@@ -168,8 +168,8 @@ const busqueda = (paginaActual, textoBusqueda)=>{
             showMovies(data, paginaActual)
         }else{
             moviesAllContainer.classList.add('hidden');
-            searchResults.classList.remove('hidden')
-            loadMore.classList.add('hidden')
+            searchResults.classList.remove('hidden');
+            loadMore.classList.add('hidden');
         }
     })
 }
@@ -201,5 +201,7 @@ loadMore.onclick = ()=>{
 logo.onclick = ()=>{
     moviesAllContainer.classList.add('hidden');
     main.classList.remove('hidden');
-    banner.classList.remove('hidden')
+    banner.classList.remove('hidden');
+    searchResults.classList.add('hidden')
+
 }

@@ -363,6 +363,9 @@ body {
 #home input[type=search]::-webkit-search-cancel-button {
   display: none;
 }
+#home input[type=search]:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px white inset;
+}
 #home #menu-mobile {
   display: none;
 }
@@ -535,6 +538,11 @@ body {
   background-position-x: 50%;
   width: 100%;
 }
+@media (min-width: 1281px) {
+  .noSeacrhFound {
+    height: 586px;
+  }
+}
 
 .noSearchText {
   position: absolute;
@@ -672,7 +680,7 @@ body {
 }
 #home #card #description-box {
   width: 100%;
-  height: 60%;
+  min-height: 0;
   margin: 0;
   padding: 0;
   background-color: #FFFFFF;

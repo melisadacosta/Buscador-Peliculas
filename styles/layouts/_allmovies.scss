@@ -96,6 +96,9 @@
     background-position-y: 50%;
     background-position-x: 50%;
     width: 100%;
+    @media(min-width: 1281px){
+        height: 586px;
+    }
 }
 .noSearchText{
     position: absolute;
