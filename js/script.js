@@ -29,25 +29,25 @@ let menuClick = 1
 
 const movieHome = (url, container) => {
     fetch(url)
-    .then(response => response.json())
-    .then(data => {
-        container.innerHTML = ``;
-        const info = data.results.slice(0,5)
-        for(const inf of info){
-            let movies = containerModel.cloneNode(true);
-            if(inf.poster_path){
-                movies.children[0].src = `https://image.tmdb.org/t/p/w300_and_h450_bestv2/${inf.poster_path}`;
-            }else{
-                movies.children[0].src = './img/no-image.png'
-            }
-            movies.children[1].innerHTML = inf.title;
-            movies.onclick = ()=>{
-                movieSelected(inf)
+        .then(response => response.json())
+        .then(data => {
+            container.innerHTML = ``;
+            const info = data.results.slice(0, 5)
+            for (const inf of info) {
+                let movies = containerModel.cloneNode(true);
+                if (inf.poster_path) {
+                    movies.children[0].src = `https://image.tmdb.org/t/p/w300_and_h450_bestv2/${inf.poster_path}`;
+                } else {
+                    movies.children[0].src = './img/no-image.png'
                 }
-            container.appendChild(movies);
+                movies.children[1].innerHTML = inf.title;
+                movies.onclick = () => {
+                    movieSelected(inf)
+                }
+                container.appendChild(movies);
             }
 
-    })
+        })
 }
 
 const movieDetails = peliculaId => {
@@ -69,7 +69,7 @@ const movieSelected = movie => {
     selectedMovieTitle.innerText = movie.title;
     selectedMovieDecription.innerText = movie.overview;
     let date = new Date(movie.release_date);
-    let options = {year: 'numeric', month: 'long', day:'numeric'};
+    let options = { year: 'numeric', month: 'long', day: 'numeric' };
     selectedMovieReleaseDate.innerText = date.toLocaleDateString('en-GB', options);
     selectedMovieBackground.style.background = `url('https://image.tmdb.org/t/p/w500/${movie.backdrop_path}')`;
     selectedMovieBackground.style.backgroundRepeat = 'no-repeat';
@@ -83,20 +83,20 @@ selectedMovieFondo.onclick = () => {
     moviePop.classList.remove('position-pop');
     bodyPop.classList.remove('popup-body');
 }
-close.onclick=()=>{
+close.onclick = () => {
     moviePop.classList.add('hidden')
     moviePop.classList.remove('position-pop');
     bodyPop.classList.remove('popup-body');
 }
 
-menuMobileContainer.onclick=()=>{
-    if(menuClick === 1){
+menuMobileContainer.onclick = () => {
+    if (menuClick === 1) {
         barras.classList.add('hidden');
         closeMenu.classList.remove('hidden');
         menuMobile.classList.remove('hidden')
         menuMobile.classList.add('menu-mostrar')
         menuClick = 2
-    }else{
+    } else {
         barras.classList.remove('hidden');
         closeMenu.classList.add('hidden');
         menuMobile.classList.add('hidden')
