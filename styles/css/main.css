@@ -6,7 +6,6 @@ body {
 /*home*/
 body {
   margin: 0 auto;
-  width: 100vw;
   overflow-x: hidden;
 }
 
@@ -19,9 +18,9 @@ body {
 #home main {
   position: relative;
   top: 70px;
-  left: 95px;
-  width: 91%;
-  margin-left: 10px;
+  left: 75px;
+  max-width: 1200px;
+  width: 1188px;
 }
 #home main h1 {
   font-family: "Roboto", sans-serif;
@@ -57,8 +56,10 @@ body {
 #home .category-header {
   display: flex;
   justify-content: space-between;
-  padding-left: 20px;
-  width: 93%;
+  padding: 20px;
+  max-width: 1200px;
+  width: 95%;
+  margin-left: 50px;
 }
 #home .category-header p {
   font-family: "Roboto", sans-serif;
@@ -68,8 +69,10 @@ body {
 }
 #home #popular-container, #home #upcoming-container, #home #topRated-container, #home #nowPlaying-container {
   display: flex;
+  max-width: 1200px;
   justify-content: space-between;
-  width: 93%;
+  width: 100%;
+  margin-left: 5%;
   margin-bottom: 40px;
   cursor: pointer;
 }
@@ -79,18 +82,15 @@ body {
 #home #movie-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 #home #popular, #home #topRated, #home #upcoming, #home #nowPlaying {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
 }
 #home #category-header {
   display: flex;
   justify-content: space-between;
-  width: 93%;
+  width: 1000px;
 }
 #home .movie-box:hover .popular-title {
   color: #000000;
@@ -241,7 +241,7 @@ body {
     padding: 0;
     padding-left: 10px;
     align-items: center;
-    flex-basis: 100vw;
+    width: 100%;
     border-bottom: 1px solid #f8f8f8;
     box-sizing: border-box;
   }
@@ -271,6 +271,10 @@ body {
   #home #contenedor-logo {
     width: 54px;
     min-height: 50px;
+  }
+  #home #contenedor-logo img {
+    padding-left: 20px;
+    width: 30px;
   }
 }
 #home #contenedor-categorias {
@@ -426,9 +430,8 @@ body {
 #moviesAll {
   position: relative;
   top: 70px;
-  left: 75px;
-  max-width: 1200px;
-  width: 1188px;
+  left: 95px;
+  width: 90%;
 }
 
 .movie-container-all {
@@ -436,7 +439,6 @@ body {
   flex-direction: column;
   align-items: center;
   margin-top: 40px;
-  margin-left: 60px;
 }
 
 #allMovies-container {

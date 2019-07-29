@@ -20,7 +20,7 @@ header{
         padding: 0;
         padding-left: 10px;
         align-items: center;
-        flex-basis: 100vw;
+        width: 100%;
         border-bottom: 1px solid $border-color;
         box-sizing: border-box;
     }
@@ -48,6 +48,10 @@ aside{
     @media (max-width: 766px) {
         width: 54px;
         min-height: 50px;
+        img{
+        padding-left: 20px;
+        width: 30px;
+        }
     }
 }
 #contenedor-categorias{

@@ -51,14 +51,12 @@ body{
     #popular{
         display: flex;
         flex-direction: column;
-        margin-top: -5%;
+        // margin-top: -5%;
     }
     .category-header{
         display: flex;
         justify-content: space-between;
-        padding-left: 20px;
-        width: 93%;
-        // margin-left: 50px;
+        width: 87%;
         p{
             font-family: $main-font;
             font-size: 12px;
@@ -86,13 +84,8 @@ body{
     #popular, #topRated, #upcoming, #nowPlaying{
         display: flex;
         flex-direction: column;
-        align-items: center;
         width: 100%;
-    }
-    #category-header{
-        display: flex;
-        justify-content: space-between;
-        width: 93%;
+        margin-left: 4%;
     }
     .movie-box:hover{
         .popular-title{
