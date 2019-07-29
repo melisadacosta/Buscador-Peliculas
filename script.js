@@ -19,7 +19,6 @@ const selectedMovieReleaseDate = document.getElementById('releaseDate');
 const selectedMovieBackground = document.getElementById('background-img');
 const selectedMovieFondo = document.getElementById('fondo');
 const close = document.getElementById('close')
-
 //MOBILE MENU
 const menuMobileContainer = document.getElementById('menu-mobile');
 const menuMobile = document.getElementById('menu-mobile-container')
@@ -95,13 +94,13 @@ menuMobileContainer.onclick=()=>{
         barras.classList.add('hidden');
         closeMenu.classList.remove('hidden');
         menuMobile.classList.remove('hidden')
-        menuMobile.classList.add('menuIntento')
+        menuMobile.classList.add('menu-mostrar')
         menuClick = 2
     }else{
         barras.classList.remove('hidden');
         closeMenu.classList.add('hidden');
         menuMobile.classList.add('hidden')
-        menuMobile.classList.remove('menuIntento')
+        menuMobile.classList.remove('menu-mostrar')
         menuClick = 1
     }
 }

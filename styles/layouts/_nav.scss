@@ -151,12 +151,17 @@ input[type="search"]:-webkit-autofill {
         flex-grow: 0.1;
         border-left: 1px solid $border-color;
         color: rgba(8,28,36,.7);
+        cursor: pointer;
         .fas{
             font-size: 30px;
+            opacity: 0.6;
+        &:hover{
+            opacity: 1;
+        }
         }
     }
 }
-.menuIntento{
+.menu-mostrar{
     height: 100vh;
     position: fixed;
     z-index: 50;
@@ -188,6 +193,11 @@ input[type="search"]:-webkit-autofill {
     font-size: 6px;
     height: 45%;
     box-sizing: border-box;
+    opacity: 0.6;
+    cursor: pointer;
+        &:hover{
+            opacity: 1;
+        }
 }
 .border{
     border-right: 1px solid $border-color;

@@ -68,7 +68,6 @@ body{
         h1{
             width: 150px;
         }
-
     }
     
     #movie-container{
@@ -97,10 +96,10 @@ body{
         transition: transform .5s ease;
         &:hover{
         transform: scale(1);
-    }
-    .hideMovie{
-        display: none;
-    }
+        }
+        .hideMovie{
+            display: none;
+        }
     }
 }
 @media (min-width: 320px) and (max-width: 480px) {
@@ -123,17 +122,17 @@ body{
                 width: 105%;
             }
         }
-        }
+    }
     #popular, #topaRated, #upcoming, #nowPlaying{
         margin-top: 0;
         .category-header{
             margin-left: 2%;
             width: 90%;
+            }
         }
     }
-}
     
-  }
+}
 @media(min-width: 768px) and (max-width: 1024px){ //igual o mayor a 768px y hasta 1024px
     #home{
         .portada-container{
@@ -162,21 +161,21 @@ body{
                 margin-right: 3%;
                 &:nth-child(5n){
                     display: none;
-                }
+                    }
                 .popular-img{
                     width: 105%;
+                    }
                 }
-            }
             }
         #popular, #topaRated, #upcoming, #nowPlaying{
             margin-top: 0;
             .category-header{
                 margin-left: 2%;
                 width: 90%;
+                }
             }
         }
     }
-}
 }
 
 @media (min-width: 320px) and (max-width: 767px) {
@@ -213,13 +212,12 @@ body{
                 margin-right: 0;
                 &:nth-child(5n){
                     display: none;
-                }
+                    }
                 .popular-img{
                     width: 100%;
+                    }
                 }
             }
         }
-        }
     }
-    
 }

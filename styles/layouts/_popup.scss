@@ -13,7 +13,6 @@
         top:0;
         left:0;
         z-index: 99;
-
     }
     #card{
         width: 760px;
@@ -33,7 +32,7 @@
             transform: scale(1.3);
             top: 9%;
             left: 9%;
-        }
+        }   
         #background-img{
             width: 100%;
             height: 40%;
@@ -99,10 +98,6 @@
             font-weight: 300;
         }
     }
-    .mostrar{
-        display: block;
-        z-index: 99;
-    }
     .view-all{
         cursor: pointer;
     }
@@ -115,21 +110,21 @@
         &:hover{
             background-color: $secondary-color;
         }
-    .fa-times{
+        .fa-times{
         cursor: pointer;
         color: #FFFFFF;
+        }
     }
-}
-.hidden{
-    display: none;
-}
-}
-.popup-body{
-    height: 100vh;
-    overflow: hidden;
-}
-.position-pop{
-    position: fixed;
+    .hidden{
+        display: none; 
+        }
+    .popup-body{
+        height: 100vh;
+        overflow: hidden;
+    }
+    .position-pop{
+        position: fixed;
+    }
 }
 @media(min-width: 768px) and (max-width: 1024px){
     #home{
@@ -138,12 +133,11 @@
             position: sticky;
             #moviePoster{
                 visibility: hidden;
-
+                }
             }
         }
     }
-        }
-        }
+}
 
 @media (min-width: 320px) and (max-width: 767px) {
     #home{
@@ -183,9 +177,9 @@
             #description-text{
                 h3{
                     font-size: 14px;
+                    }
                 }
             }
         }
-        }
-}
+    }
 }
