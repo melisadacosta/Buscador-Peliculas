@@ -52,11 +52,22 @@ body{
         display: flex;
         justify-content: space-between;
         width: 87%;
-        p{
+        .view-all{
             font-family: $main-font;
             font-size: 12px;
-            color:rgba(8,28,36,.5);
             font-weight: 300;
+            color: black;
+            opacity: 0.7;
+            &:hover{
+                opacity: 1;
+            }
+            .fas{
+                color: black;
+                opacity: 0.7;
+                &:hover{
+                    opacity: 1;
+                }
+            }
         }
     }
     #popular-container, #upcoming-container, #topRated-container, #nowPlaying-container{
@@ -171,7 +182,9 @@ body{
             margin-top: 0;
             .category-header{
                 margin-left: 2%;
-                width: 90%;
+                // width: 90%;
+                width: 85%;
+
                 }
             }
         }
@@ -197,7 +210,7 @@ body{
             width: 100%;
             left: -15px;
             .category-header{
-                width: 95%;
+                width: 92%;
                 margin-left: 11px;
             }
             #popular-container, #upcoming-container, #topRated-container, #nowPlaying-container{
