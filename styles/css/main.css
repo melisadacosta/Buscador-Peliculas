@@ -515,6 +515,11 @@ body {
   height: 100%;
   top: 70px;
 }
+@media (max-width: 766px) {
+  #searchResults {
+    left: 0;
+  }
+}
 
 .noSeacrhFound {
   background-image: url(../../img/batman.jpg);
@@ -524,7 +529,8 @@ body {
   background-repeat: no-repeat;
   opacity: 0.5;
   background-position-y: 50%;
-  width: 1200px;
+  background-position-x: 50%;
+  width: 100%;
 }
 
 .noSearchText {

@@ -70,7 +70,9 @@ const movieSelected = movie => {
     selectedMovieImg.src = `https://image.tmdb.org/t/p/w300_and_h450_bestv2/${movie.poster_path}`;
     selectedMovieTitle.innerText = movie.title;
     selectedMovieDecription.innerText = movie.overview;
-    selectedMovieReleaseDate.innerText = movie.release_date;
+    let date = new Date(movie.release_date);
+    let options = {year: 'numeric', month: 'long', day:'numeric'};
+    selectedMovieReleaseDate.innerText = date.toLocaleDateString('en-GB', options);
     selectedMovieBackground.style.background = `url('https://image.tmdb.org/t/p/w500/${movie.backdrop_path}')`;
     selectedMovieBackground.style.backgroundRepeat = 'no-repeat';
     selectedMovieBackground.style.backgroundSize = 'cover';
