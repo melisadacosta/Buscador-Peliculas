@@ -21,6 +21,7 @@ body {
   top: 70px;
   left: 95px;
   width: 91%;
+  margin-left: 10px;
 }
 #home main h1 {
   font-family: "Roboto", sans-serif;
@@ -249,7 +250,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 7%;
+  width: 95px;
   height: 1000px;
   display: flex;
   flex-direction: column;
@@ -275,7 +276,7 @@ body {
 #home #contenedor-categorias {
   display: flex;
   flex-direction: column;
-  width: 7%;
+  width: 95px;
   align-items: center;
   position: fixed;
   background-color: #FFFFFF;
@@ -298,7 +299,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 100%;
+  width: 95px;
+  opacity: 0.6;
 }
 #home #categorias-lists li {
   font-size: 10px;
@@ -308,10 +310,6 @@ body {
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  opacity: 0.6;
-}
-#home #categorias-lists li:hover {
-  opacity: 1;
 }
 #home #categorias-lists h1 {
   color: #081c24;

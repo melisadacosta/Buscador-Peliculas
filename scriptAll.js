@@ -18,7 +18,7 @@ let currentPage = 1
 let clickCount = ''
 
 const showMovies = (data, paginaActual) =>{
-    results.innerText = `${data.total_results} results`;
+    results.innerText = `${data.total_results.toLocaleString()} results`;
     for(const d of data.results){
         let moviesBox = movieModel.cloneNode(true);
         if(d.poster_path){
