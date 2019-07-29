@@ -68,12 +68,39 @@
     height: 43px;
     cursor: pointer;
     border: solid 1px black;
+    background-color: white;
     margin-top: -20px;
     margin-bottom: 60px;
     &:hover{
         background-color: black;
         color: white;
     }
+}
+#searchResults{
+    left: 95px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 70px;
+}
+.noSeacrhFound{
+    background-image: url(../../img/batman.jpg);
+    height: 540px;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    background-position-y: 50%;
+    width: 1200px;
+}
+.noSearchText{
+    position: absolute;
+    top: 50%;
+    margin: 0;
+    left: 40%;
+    font-weight: 500;
+    font-size: 30px;
+    z-index: 3;
 }
 @media(min-width: 768px) and (max-width: 1024px){ 
     #home{

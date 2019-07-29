@@ -1,5 +1,4 @@
 const allMovies = document.getElementById('allMovies-container');
-const contenedorAllMovies = document.getElementById('moviesAll')
 const movieModel = allMovies.children[0];
 const model = document.getElementById('model');
 const menu = document.getElementById('categorias-lists');
@@ -11,7 +10,6 @@ const loadMore = document.getElementById('loadMore-button');
 const logo = document.getElementById('contenedor-logo');
 const viewAll = document.getElementsByClassName('view-all');
 const search = document.getElementById('search');
-const banner = document.getElementById('banner')
 
 
 let currentPage = 1
@@ -40,7 +38,10 @@ const stylesOnClick = ()=>{
     main.classList.add('hidden');
     banner.classList.add('hidden')
     moviesAllContainer.classList.remove('hidden');
-    loadMore.classList.remove('hidden')
+    loadMore.classList.remove('hidden');
+    if(!searchResults.classList.contains('hidden')){
+        searchResults.classList.add('hidden')
+    }
     allMovies.innerHTML = '';
 }
 const popularAll = paginaActual =>{
@@ -143,16 +144,9 @@ const busqueda = (paginaActual, textoBusqueda)=>{
             categoryTitle.innerText = 'Search Results';
             showMovies(data, paginaActual)
         }else{
-            contenedorAllMovies.innerHTML='';
-            let text = document.createElement('p');
-            text.classList.add('noSearchText');
-            text.innerText = 'No Search Found'
-            let imgBack = document.createElement('div');
-            imgBack.classList.add('noSeacrhFound');
-            contenedorAllMovies.appendChild(text);
-            contenedorAllMovies.appendChild(imgBack)
-            // contenedorAllMovies.innerHTML = `<p class='noSearchText'>No Results Found</p> 
-            //                                 <div class ='noSeacrhFound'></div>`
+            moviesAllContainer.classList.add('hidden');
+            searchResults.classList.remove('hidden')
+            loadMore.classList.add('hidden')
         }
     })
 }
