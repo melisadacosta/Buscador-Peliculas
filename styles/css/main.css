@@ -6,7 +6,6 @@ body {
 /*home*/
 body {
   margin: 0 auto;
-  width: 100vw;
   overflow-x: hidden;
 }
 
@@ -19,9 +18,9 @@ body {
 #home main {
   position: relative;
   top: 70px;
-  left: 95px;
-  width: 91%;
-  margin-left: 10px;
+  left: 75px;
+  max-width: 1200px;
+  width: 1188px;
 }
 #home main h1 {
   font-family: "Roboto", sans-serif;
@@ -52,11 +51,15 @@ body {
 #home #popular {
   display: flex;
   flex-direction: column;
+  margin-top: -5%;
 }
 #home .category-header {
   display: flex;
   justify-content: space-between;
-  width: 87%;
+  padding: 20px;
+  max-width: 1200px;
+  width: 95%;
+  margin-left: 50px;
 }
 #home .category-header p {
   font-family: "Roboto", sans-serif;
@@ -66,8 +69,10 @@ body {
 }
 #home #popular-container, #home #upcoming-container, #home #topRated-container, #home #nowPlaying-container {
   display: flex;
+  max-width: 1200px;
   justify-content: space-between;
-  width: 93%;
+  width: 100%;
+  margin-left: 5%;
   margin-bottom: 40px;
   cursor: pointer;
 }
@@ -77,13 +82,15 @@ body {
 #home #movie-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 #home #popular, #home #topRated, #home #upcoming, #home #nowPlaying {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  margin-left: 4%;
+}
+#home #category-header {
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
 }
 #home .movie-box:hover .popular-title {
   color: #000000;
@@ -266,7 +273,6 @@ body {
     min-height: 50px;
   }
   #home #contenedor-logo img {
-    padding-left: 20px;
     width: 30px;
   }
 }
@@ -515,11 +521,6 @@ body {
   height: 100%;
   top: 70px;
 }
-@media (max-width: 766px) {
-  #searchResults {
-    left: 0;
-  }
-}
 
 .noSeacrhFound {
   background-image: url(../../img/batman.jpg);
@@ -529,8 +530,7 @@ body {
   background-repeat: no-repeat;
   opacity: 0.5;
   background-position-y: 50%;
-  background-position-x: 50%;
-  width: 100%;
+  width: 1200px;
 }
 
 .noSearchText {
