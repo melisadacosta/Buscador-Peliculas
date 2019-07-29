@@ -27,6 +27,9 @@ const showMovies = (data, paginaActual) =>{
             moviesBox.children[0].src = './img/no-image.png'
         }
         moviesBox.children[1].innerHTML = d.title;
+        moviesBox.onclick = ()=>{
+            movieSelected(d)
+            }
         allMovies.appendChild(moviesBox)
     }
     if(paginaActual === data.total_pages){
