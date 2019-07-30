@@ -60,11 +60,22 @@ body {
   justify-content: space-between;
   width: 87%;
 }
-#home .category-header p {
+#home .category-header .view-all {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
-  color: rgba(8, 28, 36, 0.5);
   font-weight: 300;
+  color: black;
+  opacity: 0.7;
+}
+#home .category-header .view-all:hover {
+  opacity: 1;
+}
+#home .category-header .view-all .fas {
+  color: black;
+  opacity: 0.7;
+}
+#home .category-header .view-all .fas:hover {
+  opacity: 1;
 }
 #home #popular-container, #home #upcoming-container, #home #topRated-container, #home #nowPlaying-container {
   display: flex;
@@ -171,7 +182,7 @@ body {
   }
   #home #main #popular .category-header, #home #main #topaRated .category-header, #home #main #upcoming .category-header, #home #main #nowPlaying .category-header {
     margin-left: 2%;
-    width: 90%;
+    width: 85%;
   }
 }
 @media (min-width: 320px) and (max-width: 767px) {
@@ -191,7 +202,7 @@ body {
     left: -15px;
   }
   #home #main .category-header {
-    width: 95%;
+    width: 92%;
     margin-left: 11px;
   }
   #home #main #popular-container, #home #main #upcoming-container, #home #main #topRated-container, #home #main #nowPlaying-container {
