@@ -556,11 +556,12 @@ body {
   font-size: 30px;
   z-index: 3;
 }
+
 @media (min-width: 768px) and (max-width: 1024px) {
-  #home #home #moviesAll {
+  #home #moviesAll {
     width: 92%;
   }
-  #home #home #moviesAll .movie-container-all {
+  #home #moviesAll .movie-container-all {
     padding: 0;
     margin: 0% 0% 0% 3%;
     display: flex;
@@ -568,26 +569,26 @@ body {
     max-width: 88%;
     justify-content: space-around;
   }
-  #home #home #moviesAll .movie-container-all .category-header-all {
+  #home #moviesAll .movie-container-all .category-header-all {
     margin-left: 15px;
   }
-  #home #home #moviesAll .movie-container-all #allMovies-container {
+  #home #moviesAll .movie-container-all #allMovies-container {
     margin-left: 30px;
   }
-  #home #home #moviesAll .movie-container-all #allMovies-container .movie-box-all {
+  #home #moviesAll .movie-container-all #allMovies-container .movie-box-all {
     margin-right: 3%;
     width: 45%;
   }
-  #home #home #moviesAll .movie-container-all #allMovies-container .movie-box-all .img-all {
+  #home #moviesAll .movie-container-all #allMovies-container .movie-box-all .img-all {
     width: 105%;
   }
 }
 @media (min-width: 320px) and (max-width: 767px) {
-  #home #home #moviesAll {
+  #home #moviesAll {
     width: 100%;
     left: -15px;
   }
-  #home #home #moviesAll .movie-container-all {
+  #home #moviesAll .movie-container-all {
     padding: 0;
     margin: 0% 0% 0% 3%;
     display: flex;
@@ -595,24 +596,23 @@ body {
     max-width: 88%;
     justify-content: space-around;
   }
-  #home #home #moviesAll .movie-container-all .category-header-all {
+  #home #moviesAll .movie-container-all .category-header-all {
     margin-left: 4px;
     width: 102%;
   }
-  #home #home #moviesAll .movie-container-all #allMovies-container {
+  #home #moviesAll .movie-container-all #allMovies-container {
     margin-left: 11px;
     width: 108%;
     margin-right: 0px;
   }
-  #home #home #moviesAll .movie-container-all #allMovies-container .movie-box-all {
+  #home #moviesAll .movie-container-all #allMovies-container .movie-box-all {
     width: 50%;
     margin-right: 0;
   }
-  #home #home #moviesAll .movie-container-all #allMovies-container .movie-box-all .img-all {
+  #home #moviesAll .movie-container-all #allMovies-container .movie-box-all .img-all {
     width: 100%;
   }
 }
-
 #home #movie-popup {
   width: 100%;
   top: 0;
